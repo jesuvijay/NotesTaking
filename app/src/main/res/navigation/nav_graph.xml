@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.jesu.notestaking.ui.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Notes"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_addMore"
             app:destination="@id/addMoreFragment" />
@@ -17,15 +17,15 @@
     <fragment
         android:id="@+id/addMoreFragment"
         android:name="com.jesu.notestaking.ui.AddMoreFragment"
-        android:label="fragment_add_more"
-        tools:layout="@layout/fragment_add_more" >
+        android:label="Add/Edit Note"
+        tools:layout="@layout/fragment_add_more">
         <action
             android:id="@+id/action_savemore"
             app:destination="@id/homeFragment" />
         <argument
-            app:argType="com.jesu.notestaking.db.Note"
             android:name="Note"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            android:defaultValue="@null"
+            app:argType="com.jesu.notestaking.db.Note"
+            app:nullable="true" />
     </fragment>
 </navigation>

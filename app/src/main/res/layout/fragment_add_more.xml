@@ -4,22 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.AddMoreFragment">
-    \
 
-    <EditText
-        android:id="@+id/et_title"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:inputType="text"
         android:layout_height="wrap_content"
-        android:hint="title" />
+        android:layout_margin="@dimen/dim_8dp">
 
-    <EditText
-        android:id="@+id/et_desc"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_title"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_desc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:inputType="textMultiLine"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_title"
-        android:hint="description" />
+        android:layout_below="@+id/til_title"
+        android:layout_margin="@dimen/dim_8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:hint="@string/hint_description"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_done"
@@ -27,9 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dim_16"
         android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_done_24"
-
         android:tint="@android:color/white" />
 
 </RelativeLayout>

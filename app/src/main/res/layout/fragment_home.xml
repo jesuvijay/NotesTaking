@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dim_white"
     tools:context=".ui.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -20,8 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:tint="@android:color/white"
+        android:layout_margin="@dimen/dim_16"
         android:clickable="true"
 
-        android:src="@drawable/ic_add" />
+        android:focusable="true"
+        android:src="@drawable/ic_add"
+        android:tint="@android:color/white"/>
 </RelativeLayout>
